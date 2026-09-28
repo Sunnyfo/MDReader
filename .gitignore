@@ -1,0 +1,18 @@
+# 构建产物（编译出的二进制 / 中间文件）
+build/*
+!build/marked_min.js
+
+# 安装包（如有需要，请通过 Release 附件分发，不要进 git）
+*.dmg
+
+# 图标源（仅保留编译好的 icns）
+icon/*.png
+icon/*.iconset/
+
+# 开发诊断脚本（非发布内容）
+iconcheck.swift
+listwindows.swift
+
+# macOS
+.DS_Store
+.AppleDouble
