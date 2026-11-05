@@ -1,0 +1,41 @@
+{
+  "applicationId": "com.local.mdreader",
+  "version": "1.1.0",
+  "defaultMode": "window",
+  "documentRoot": "/",
+  "url": "/index.html",
+  "enableNativeAPI": true,
+  "modes": {
+    "window": {
+      "title": "MD Reader",
+      "width": 1100,
+      "height": 760,
+      "minWidth": 480,
+      "minHeight": 360,
+      "resizable": true,
+      "maximize": false,
+      "hidden": false,
+      "center": true,
+      "fullScreen": false,
+      "alwaysOnTop": false,
+      "enableInspector": false,
+      "borderless": false,
+      "transparent": false
+    }
+  },
+  "cli": {
+    "binaryName": "MDReader",
+    "resourcesDir": "app",
+    "appId": "mdreader",
+    "clientLibrary": "neutralino.js",
+    "binaryDependencies": {
+      "webview2": {
+        "label": "WebView2 Runtime",
+        "url": "https://go.microsoft.com/fwlink/p/?LinkId=2124703",
+        "installedCheckCommand": "reg query HKLM\\SOFTWARE\\WOW6432Node\\Microsoft\\EdgeUpdate\\Clients\\{F3017226-FE2A-4295-8BDF-00C3A9A7E4C5} /v pv /t REG_SZ",
+        "installCommand": "powershell -NoProfile -Command \"Start-Process '{webview2InstallerPath}' -Verb RunAs -Wait\""
+      },
+      "binaries": {}
+    }
+  }
+}
